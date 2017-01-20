@@ -104,7 +104,7 @@ http://docs.mongodb.org/manual/reference/configuration-options/#processmanagemen
 
 ```
 default['mongodb3']['config']['mongod']['processManagement']['fork'] = true or nil # default : false
-default['mongodb3']['config']['mongod']['processManagement']['pidFilePath'] = '/var/run/mongodb/mongodb.pid' or nil
+default['mongodb3']['config']['mongod']['processManagement']['pidFilePath'] = '/var/run/mongodb/mongod.pid' or nil
 ```
 
 #### net Options

@@ -1,24 +1,10 @@
 #
 # Cookbook Name:: mongodb3
 # Attribute:: default
-#
-# Copyright 2015, Sunggun Yu
-#
-# Licensed under the Apache License, Version 2.0 (the 'License');
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an 'AS IS' BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+
 
 # MongoDB version to install
-default['mongodb3']['version'] = '3.0.7'
+default['mongodb3']['version'] = '3.0.12'
 
 # Setup default package version attribute to install
 pkg_version = node['mongodb3']['version']
@@ -58,7 +44,7 @@ case node['platform_family']
     mongo_user = 'mongod'
     mongo_group = 'mongod'
     mongo_dbpath = '/var/lib/mongo'
-    mongo_pid_file = '/var/run/mongodb/mongodb.pid'
+    mongo_pid_file = '/var/run/mongodb/mongod.pid'
     config_processManagement_fork = true
   when 'debian'
     mongo_user = 'mongodb'
